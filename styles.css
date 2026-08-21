@@ -66,11 +66,19 @@ nav.wrap{
   font-family:'Fraunces', serif; font-weight:600; font-size:19px;
   text-decoration:none;
 }
+.brandmark img{height:34px; width:auto; display:block;}
 .brandmark .dot-row{display:flex; gap:3px;}
 .brandmark .dot{width:7px; height:7px; border-radius:50%;}
 .brandmark .dot:nth-child(1){background:var(--feuille);}
 .brandmark .dot:nth-child(2){background:var(--indigo);}
 .brandmark .dot:nth-child(3){background:var(--terre);}
+
+.hero-logo{
+  max-width:280px; width:56%; height:auto; display:block; margin-bottom:8px;
+}
+@media (max-width:640px){.hero-logo{max-width:200px;}}
+
+footer .brandmark img{height:30px;}
 
 .navlinks{display:flex; gap:28px; font-size:14px; font-weight:500; flex-wrap:wrap;}
 .navlinks a{text-decoration:none; opacity:0.7; transition:opacity .2s; padding-bottom:2px;}
