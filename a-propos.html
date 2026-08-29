@@ -8,6 +8,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .value-note{
+    border-top:1px solid var(--line); margin-top:44px; padding-top:32px;
+  }
+  .value-note p + p{margin-top:14px;}
+  .anchor-card{
+    background:var(--paper-2); border:1px solid var(--line); border-radius:4px;
+    padding:32px 28px; margin-top:20px;
+  }
+  .anchor-stats{display:flex; gap:32px; flex-wrap:wrap; margin-top:20px;}
+  .anchor-stats .stat-num{font-size:26px;}
+</style>
 </head>
 <body>
 
@@ -21,7 +33,8 @@
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos</a>
       <a href="poles.html">Nos pôles</a>
-      <a href="conseil-coaching.html">Conseil & Coaching</a>
+      <a href="moyens-action.html">Moyens d'action</a>
+      <a href="conseil-coaching.html">Conseil &amp; Coaching</a>
       <a href="direction.html">Direction</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -33,22 +46,24 @@
     <div class="wrap">
       <p class="eyebrow">À propos</p>
       <h1>Une même main, plusieurs domaines.</h1>
-      <p class="lede">Pourquoi GSS existe, et pourquoi elle avance sur trois pôles à la fois.</p>
+      <p class="lede">Pourquoi GSS existe, et pourquoi elle avance sur cinq domaines à la fois.</p>
     </div>
   </section>
 
   <section class="about" style="padding-top:64px;">
     <div class="wrap about-grid">
       <div class="reveal">
+        <p class="eyebrow" style="margin-bottom:10px;">Qu'est-ce que Global Services Spectrum ?</p>
         <p style="opacity:0.85; max-width:58ch;">
-          Global Services Spectrum (GSS) est une entreprise togolaise en formation, basée à Tsévié dans la Préfecture du Zio. Elle est née d'une conviction simple : les grands défis d'un territoire — énergie, éducation, patrimoine — se répondent mieux quand ils sont portés par une seule main plutôt que dispersés entre plusieurs acteurs isolés.
+          Fondée à Tsévié, dans la Préfecture du Zio au Togo, Global Services Spectrum (GSS) est une entreprise qui a pour ambition de participer au développement économique local par l'innovation, la formation et une agriculture intégrée et durable. Pour cela, nous articulons notre action autour de plusieurs branches complémentaires :
         </p>
-        <p style="margin-top:16px; opacity:0.85; max-width:58ch;">
-          C'est pourquoi GSS avance sur trois pôles distincts mais reliés : l'environnement et les bioénergies, la formation et le développement, l'art et la culture. Chacun répond à un besoin réel du territoire ; ensemble, ils forment une seule trajectoire.
-        </p>
-        <p style="margin-top:16px; opacity:0.85; max-width:58ch;">
-          Cette logique guide aussi les projets à venir, comme GSS Agro-Commerce, pensé pour rapprocher les producteurs locaux des consommateurs togolais.
-        </p>
+        <ul class="audience-list" style="margin-top:18px;">
+          <li><strong>Environnement &amp; Bioénergies</strong> — biodigesteurs domestiques, séchoirs solaires, fours solaires, composteurs, partenariat avec Bioeco France.</li>
+          <li><strong>Formation &amp; Développement</strong> — entrepreneuriat, anglais, informatique, philosophie.</li>
+          <li><strong>Art &amp; Culture</strong> — un centre artisanal à Tsévié, pour faire vivre les savoir-faire locaux.</li>
+          <li><strong>Agro-Commerce</strong> <span class="badge-soon" style="margin-left:6px;">En développement</span> — viandes, volailles, poissons, légumes, fruits, œufs, avec chambre froide.</li>
+          <li><strong>Épargne Avenir</strong> <span class="badge-soon" style="margin-left:6px;">En développement</span> — microfinance pour les lycéens et étudiants togolais.</li>
+        </ul>
       </div>
       <div class="reveal">
         <p class="pullquote">« L'excellence est notre point de départ. La transformation, notre signature. »</p>
@@ -62,8 +77,8 @@
           <div class="stat-label">Préfecture du Zio, Togo</div>
         </div>
         <div>
-          <div class="stat-num">3</div>
-          <div class="stat-label">Pôles d'activité actifs</div>
+          <div class="stat-num">5</div>
+          <div class="stat-label">Branches d'activité</div>
         </div>
         <div>
           <div class="stat-num">SARLU</div>
@@ -77,10 +92,45 @@
     <div class="wrap reveal">
       <p class="eyebrow">Notre devise</p>
       <h2 style="margin-top:12px; font-size:clamp(24px,3vw,34px);">« L'innovation au cœur de nos actions »</h2>
-      <p style="margin-top:18px; max-width:56ch; opacity:0.85;">
-        Chaque pôle de GSS applique cette devise à sa manière : l'innovation technique pour le biogaz, l'innovation pédagogique pour la formation, l'innovation par la valorisation pour l'art et la culture.
-      </p>
-      <p style="margin-top:28px;"><a class="btn btn-primary" href="poles.html">Voir nos pôles en détail</a></p>
+
+      <div class="value-note">
+        <p style="max-width:60ch; opacity:0.85;">Conscients des défis économiques, environnementaux et sociaux auxquels le Togo fait face, nous voulons proposer des solutions concrètes, accessibles et ancrées dans leur territoire. Nos actions s'adressent aussi bien aux jeunes en formation qu'aux familles et aux exploitants agricoles, avec le souci constant de rester proches des réalités du terrain.</p>
+        <p style="max-width:60ch; opacity:0.85;">L'ensemble de nos initiatives poursuit un même objectif : sensibiliser et outiller pour des modes de vie plus autonomes et plus durables, à travers l'agriculture intégrée, les bioénergies, l'entrepreneuriat et la transmission de savoirs.</p>
+        <p style="max-width:60ch; opacity:0.85;">Nous croyons également à la transparence et au partage : nos guides de formation, nos plans et nos retours d'expérience ont vocation à être diffusés et transmis, notamment lors de nos ateliers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap reveal">
+      <p class="eyebrow">Notre ancrage</p>
+      <h2 style="margin-top:12px; font-size:clamp(24px,3vw,34px);">Le site de Gblainvié</h2>
+      <div class="anchor-card">
+        <p style="max-width:62ch; opacity:0.85;">Global Services Spectrum s'appuie sur le site agricole de Gblainvié : 10 hectares en location, dont 6 hectares de terre de barre et 4 hectares de bas-fonds. C'est le socle de notre vision d'agriculture intégrée et circulaire, qui associe sur un même espace la culture du maïs, du manioc, du riz et le maraîchage, la pisciculture, et la production de biogaz à partir des déchets organiques — refermant le cycle entre élevage, culture et énergie.</p>
+        <p style="max-width:62ch; opacity:0.85; margin-top:14px;">Ce site accueille également nos expérimentations techniques : plans de parcelles, suivi cultural, et projets pilotes comme notre élevage de 350 poules pondeuses ISA Brown.</p>
+        <div class="anchor-stats">
+          <div>
+            <div class="stat-num">10 ha</div>
+            <div class="stat-label">Terrain loué à Gblainvié</div>
+          </div>
+          <div>
+            <div class="stat-num">6 + 4 ha</div>
+            <div class="stat-label">Terre de barre &amp; bas-fonds</div>
+          </div>
+          <div>
+            <div class="stat-num">350</div>
+            <div class="stat-label">Poules pondeuses ISA Brown</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap reveal">
+      <p class="eyebrow">Venir nous voir</p>
+      <p style="margin-top:12px; max-width:58ch; opacity:0.85;">Global Services Spectrum est basée à Tsévié, Préfecture du Zio, au Togo. Le site agricole de Gblainvié et le centre artisanal sont ouverts aux visites dans le cadre de nos formations et ateliers.</p>
+      <p style="margin-top:28px;"><a class="btn btn-primary" href="moyens-action.html">Découvrir nos moyens d'action</a></p>
     </div>
   </section>
 </main>
@@ -104,4 +154,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+              </html>
