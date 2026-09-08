@@ -1,3 +1,12 @@
+// Register service worker for offline support / installability
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {
+      // Fails silently if unsupported or blocked — site still works online
+    });
+  });
+}
+
 // Reveal-on-scroll for elements with .reveal
 const revealEls = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
