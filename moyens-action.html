@@ -25,19 +25,42 @@
   .means-row p{max-width:60ch; opacity:0.82;}
   @media (max-width:640px){.means-row{grid-template-columns:1fr; gap:8px;}}
 
-  .guide-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:24px;}
-  .guide-card{background:var(--paper); padding:26px 24px;}
-  .guide-card h4{font-family:'Fraunces', serif; font-size:17px; font-weight:600; margin:0;}
-  .guide-card p{font-size:13.5px; opacity:0.75; margin-top:8px;}
-  .guide-card .src{font-family:'Space Mono', monospace; font-size:11px; opacity:0.5; margin-top:10px; display:block;}
-  @media (max-width:640px){.guide-grid{grid-template-columns:1fr;}}
-
   .roadmap{list-style:none; margin:20px 0 0; padding:0; display:grid; gap:0;}
   .roadmap li{
     padding:18px 0 18px 30px; border-top:1px solid var(--line); position:relative; opacity:0.85;
   }
   .roadmap li:first-child{border-top:none;}
   .roadmap li::before{content:"→"; position:absolute; left:0; color:var(--ocre); font-weight:700;}
+
+  /* ---- Guide teaser cards ---- */
+  .guide-teaser-list{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); margin-top:28px;}
+  .guide-teaser{background:var(--paper); padding:30px 26px;}
+  .gt-head{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap;}
+  .gt-head h3{font-family:'Fraunces', serif; font-size:20px; font-weight:600; margin:0;}
+  .gt-meta{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
+  .gt-meta span{
+    font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.03em;
+    padding:4px 9px; border-radius:20px; border:1px solid var(--line); opacity:0.75;
+  }
+  .gt-tagline{font-style:italic; opacity:0.75; margin-top:10px; font-size:14.5px;}
+  .gt-body{margin-top:14px; opacity:0.85; font-size:14.5px; max-width:62ch;}
+  .gt-steps{
+    margin-top:16px; padding-top:14px; border-top:1px dashed var(--line);
+    font-size:13.5px; opacity:0.75;
+  }
+  .gt-steps strong{font-family:'Space Mono', monospace; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; opacity:0.6; display:block; margin-bottom:6px;}
+  .gt-cta{
+    display:inline-flex; align-items:center; gap:8px; margin-top:20px;
+    font-family:'Archivo', sans-serif; font-weight:600; font-size:13.5px;
+    text-decoration:none; color:var(--ink); border-bottom:2px solid var(--ocre); padding-bottom:2px;
+  }
+  .gt-cta:hover{border-color:var(--ink);}
+  .gt-cta.gt-pending{color:inherit; opacity:0.55; border-bottom-color:var(--line); cursor:default;}
+
+  .gt-video{
+    width:100%; max-width:340px; border-radius:4px; display:block;
+    margin-top:14px; box-shadow:0 10px 24px rgba(27,23,18,0.14);
+  }
 </style>
 </head>
 <body>
@@ -103,36 +126,102 @@
     <div class="wrap reveal">
       <p class="eyebrow">04 · Les guides techniques low-tech</p>
       <h2 style="margin-top:12px; font-size:clamp(24px,3vw,34px);">Documenter et diffuser</h2>
-      <p style="margin-top:14px; max-width:60ch; opacity:0.85;">Biodigesteur domestique, séchoir solaire, four solaire, composteur rotatif à activation EM-A, garde-manger anti-nuisibles : nous documentons et diffusons des solutions techniques simples, adaptées au climat et aux ressources locales.</p>
+      <p style="margin-top:14px; max-width:60ch; opacity:0.85;">Biodigesteur domestique, séchoir solaire, four solaire, composteur rotatif à activation EM-A, garde-manger anti-nuisibles : nous documentons et diffusons des solutions techniques simples, adaptées au climat et aux ressources locales. Un aperçu de chaque guide ci-dessous — le pas-à-pas complet est disponible en un clic.</p>
 
-      <div class="guide-grid">
-        <div class="guide-card">
-          <h4>Biodigesteur domestique</h4>
-          <p>Produire du biogaz à partir des déchets organiques du foyer ou de l'exploitation.</p>
-          <span class="src">Inspiré des travaux du Low-tech Lab</span>
+      <div class="guide-teaser-list">
+
+        <div class="guide-teaser">
+          <div class="gt-head">
+            <h3>Biodigesteur domestique</h3>
+          </div>
+          <div class="gt-meta">
+            <span>Difficulté moyenne</span>
+            <span>2 jours</span>
+            <span>≈ 500 €</span>
+          </div>
+          <p class="gt-tagline">Produire du biogaz combustible et du fertilisant à partir des déchets organiques.</p>
+          <p class="gt-body">Un biodigesteur est une solution technique de valorisation des déchets organiques, utilisée pour produire un gaz combustible (le biogaz) et un fertilisant (le digestat) — sans électricité, à partir de ce que produit déjà une exploitation.</p>
+          <div class="gt-steps">
+            <strong>Dans le guide complet</strong>
+            Dimensionnement du digesteur → Construction → Circuit matière (entrée, trop-plein) → Collage et étanchéité → Circuit gaz et épuration → Stockage → Sécurité → Ensemencement… <em>(16 étapes au total)</em>
+          </div>
+          <a class="gt-cta" href="https://docs.google.com/document/d/1kY3aZDEp4CotGuIY-dPR0qlreoczERXD/view?usp=sharing" target="_blank" rel="noopener">Voir le guide complet →</a>
         </div>
-        <div class="guide-card">
-          <h4>Séchoir solaire</h4>
-          <p>Conserver fruits, légumes et poissons sans électricité, grâce à l'énergie solaire.</p>
-          <span class="src">Inspiré des travaux de Chemins de Faire</span>
+
+        <div class="guide-teaser">
+          <div class="gt-head">
+            <h3>Composteur rotatif EM-A</h3>
+          </div>
+          <div class="gt-meta">
+            <span>Difficulté moyenne à avancée</span>
+            <span>Prototype GSS</span>
+          </div>
+          <p class="gt-tagline">Mélangeur intégré et micro-organismes efficaces activés.</p>
+          <p class="gt-body">Un composteur rotatif développé par GSS pour accélérer et faciliter le compostage domestique et semi-collectif des biodéchets, grâce à un mélangeur actionné par manivelle et à l'injection de micro-organismes efficaces activés (EM-A).</p>
+          <div class="gt-steps">
+            <strong>Dans le guide complet</strong>
+            Structure cylindrique → Habillage anti-intrusion → Axe central et mélangeur → Tubes d'injection EM-A → Couvercle et manivelle → Trappe de récolte… <em>(12 étapes au total)</em>
+          </div>
+          <a class="gt-cta" href="https://docs.google.com/document/d/1Cv9JK8tb11-cu76KkBPZpALP7JO8yqPE/view?usp=sharing" target="_blank" rel="noopener">Voir le guide complet →</a>
         </div>
-        <div class="guide-card">
-          <h4>Four solaire</h4>
-          <p>Cuire sans bois ni charbon, avec des principes accessibles et peu coûteux.</p>
-          <span class="src">Principes inspirés de Graine d'Évolution</span>
+
+        <div class="guide-teaser">
+          <div class="gt-head">
+            <h3>Séchoir solaire</h3>
+          </div>
+          <div class="gt-meta">
+            <span>Difficulté moyenne</span>
+            <span>2 à 3 jours</span>
+          </div>
+          <p class="gt-tagline">Cueillir, sécher, réhydrater et consommer.</p>
+          <video class="gt-video" autoplay muted loop playsinline>
+            <source src="sechoir-solaire.mp4" type="video/mp4">
+          </video>
+          <p class="gt-body">Un séchoir solaire déshydrate les aliments par exposition non directe au soleil, à l'abri de la poussière et des insectes — un séchage doux qui conserve les arômes et les qualités nutritionnelles, pour profiter toute l'année des récoltes.</p>
+          <div class="gt-steps">
+            <strong>Dans le guide complet</strong>
+            Capteur thermique → Fond du séchoir → Parois → Supports pour les claies → Couvercle et porte → Ventilateur → Claies de séchage… <em>(modèle compact et démontable)</em>
+          </div>
+          <a class="gt-cta" href="https://docs.google.com/document/d/1cuPio-CEho8544IqEHpxRFcVEjDYrgYY/view?usp=sharing" target="_blank" rel="noopener">Voir le guide complet →</a>
         </div>
-        <div class="guide-card">
-          <h4>Composteur rotatif EM-A</h4>
-          <p>Un prototype développé en propre par GSS, à activation par micro-organismes efficaces.</p>
-          <span class="src">Prototype GSS</span>
+
+        <div class="guide-teaser">
+          <div class="gt-head">
+            <h3>Four solaire</h3>
+          </div>
+          <div class="gt-meta">
+            <span>Difficulté moyenne</span>
+            <span>100 à 120 °C</span>
+          </div>
+          <p class="gt-tagline">Cuire ses aliments à l'énergie solaire, sans aucune consommation à l'usage.</p>
+          <p class="gt-body">Le four solaire concentre le rayonnement solaire pour atteindre les températures nécessaires à la cuisson, sans aucune source d'énergie extérieure une fois construit — particulièrement adapté aux zones à fort ensoleillement comme le Togo.</p>
+          <div class="gt-steps">
+            <strong>Dans le guide complet</strong>
+            Caisson isolé → Cavité de cuisson → Double vitrage → Panneaux réfléchissants → Tige de réglage → Utilisation et sécurité…
+          </div>
+          <a class="gt-cta gt-pending" href="contact.html">Guide disponible sur demande →</a>
         </div>
-        <div class="guide-card">
-          <h4>Garde-manger anti-nuisibles</h4>
-          <p>Protéger les réserves alimentaires du foyer sans recourir aux produits chimiques.</p>
-          <span class="src">Guide GSS</span>
+
+        <div class="guide-teaser">
+          <div class="gt-head">
+            <h3>Garde-manger anti-nuisibles</h3>
+          </div>
+          <div class="gt-meta">
+            <span>Difficulté facile à moyenne</span>
+            <span>1 jour</span>
+          </div>
+          <p class="gt-tagline">Conserver ses aliments sans réfrigération, à l'abri des insectes et rongeurs.</p>
+          <p class="gt-body">Le réfrigérateur peut représenter jusqu'à 25 % de la consommation électrique d'un foyer. Ce meuble surélevé, aux parois en moustiquaire, laisse l'air circuler tout en protégeant les denrées — il complète le réfrigérateur, il ne le remplace pas.</p>
+          <div class="gt-steps">
+            <strong>Dans le guide complet</strong>
+            Cadre et pieds → Parois en moustiquaire → Porte grillagée → Étagères → Finitions → Utilisation et bonnes pratiques…
+          </div>
+          <a class="gt-cta" href="https://docs.google.com/document/d/1TGHIwLm6HYoHCqiPtqqr7xEkiboS0sVN/view?usp=sharing" target="_blank" rel="noopener">Voir le guide complet →</a>
         </div>
+
       </div>
-      <p style="margin-top:22px; font-size:14px; opacity:0.7;">Guides complets disponibles sur demande, notamment lors de nos ateliers de formation — <a href="contact.html" style="text-decoration:underline;">contactez-nous</a> pour les recevoir.</p>
+
+      <p style="margin-top:22px; font-size:14px; opacity:0.7;">Le guide du four solaire arrive bientôt en ligne — <a href="contact.html" style="text-decoration:underline;">contactez-nous</a> pour le recevoir dès maintenant.</p>
     </div>
   </section>
 
